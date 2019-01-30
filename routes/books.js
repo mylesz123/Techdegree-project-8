@@ -19,3 +19,10 @@ router.get('/', (req, res, next) => {
      //The server encountered an unexpected condition which prevented it from fulfilling the request.
    })
 });
+
+/********************/
+/****** BOOKS  ******/
+/********************/
+
+
+module.exports = router;
