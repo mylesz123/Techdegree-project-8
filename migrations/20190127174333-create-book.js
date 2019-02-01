@@ -1,5 +1,5 @@
 /*'up', change db from old to new state
-queryInterface - responsible for changing the db 
+queryInterface - responsible for changing the db
 */
 'use strict';
 module.exports = {
