@@ -1,10 +1,15 @@
 body {
   padding: 10px 50px 50px;
-  font: 18px "Garamond", serif;
+  font: 1.9em "Charcoal", Sans-serif;
+  /* background: url("https://unsplash.imgix.net/photo-1419064642531-e575728395f2?q=75&fm=jpg&s=490dffe2e11f468947891ab40651e176"); */
+  background: url('134-Elia-Locardi-Travel-Photography-Snow-Fall-Iceland-2048.jpg')no-repeat center center fixed;
+  background-size: auto;
+  color: #C3CDE6;
+
 }
 
 a {
-  color: #019875;
+  color: mediumslateblue;
   text-decoration: none;
   font-weight: bold;
   transition: 0.4s;
@@ -16,11 +21,11 @@ a {
 
 a.button, input[type=submit] {
   color: white;
-  background: #019875;
+  background: mediumslateblue;
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
   padding: 10px 14px 12px;
   font-size: 14px;
-  border-radius: 2px;
+  border-radius: 12px;
   cursor: pointer;
 }
 
@@ -34,7 +39,7 @@ input[type=submit] {
 }
 
   a.button:hover, input[type=submit]:hover {
-    background-color: #01b189;
+    background-color: lightblue;
   }
 
 p {
@@ -57,18 +62,19 @@ th {
   border-bottom: 2px solid #D8B493;
   text-align: left;
   padding: 5px 20px 5px 10px;
+  color: black
 }
 
 tr {
   min-height: 50px;
+  background: #C3CDE6;
+  opacity: 0.8;
 }
 
-tr:nth-child(2n) {
-  background: #E7E7E7;
-}
 
 td {
   padding: 5px 20px 5px 10px;
+  color: black;
 }
 
 label {
@@ -76,6 +82,8 @@ label {
   min-width: 130px;
   display: inline-block;
   transition: 0.4s;
+  color: #7621ed;
+
 }
 
 input {
