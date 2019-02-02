@@ -33,14 +33,14 @@ app.use('/books', bookRoutes);
 
 //404 error for routes that are not found
 app.use((req, res, next) => {
-	const erro = new Error('Sorry, Page Not Found ');
-	erro.status = 404;
-	next(erro);
+	const error = new Error('Sorry, Page Not Found ');
+	error.status = 404;
+	next(error);
 });
 
-app.use((erro, req, res, next) => {
-	res.locals.error = erro;
-	res.render('error'); //error.pug
+app.use((error, req, res, next) => {
+	res.locals.error = error;
+	res.render('error', {error}); //error.pug pass in error
 })
 //end ERRORS
 

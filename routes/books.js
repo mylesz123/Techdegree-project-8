@@ -101,6 +101,22 @@ router.post('/:id', (req, res, next) => {
   })
 });
 
-
+//Delete Book
+router.post('/:id/delete', (req, res, next) => {
+  Book.findById(req.params.id).then((books) => {
+     if(books) {
+       return books.destroy();
+     }
+     else {
+       res.send(404);
+     }
+  })
+  .then((books) => {
+     res.redirect('/books/');
+  })
+  .catch((error) => {
+       res.send(500, error);
+  });
+});
 
 module.exports = router;

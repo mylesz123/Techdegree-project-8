@@ -3,15 +3,15 @@ body {
   font: 1.9em "Charcoal", Sans-serif;
   /* background: url("https://unsplash.imgix.net/photo-1419064642531-e575728395f2?q=75&fm=jpg&s=490dffe2e11f468947891ab40651e176"); */
   background: url('134-Elia-Locardi-Travel-Photography-Snow-Fall-Iceland-2048.jpg')no-repeat center center fixed;
+  opacity: 1.8;
   background-size: auto;
-  color: #C3CDE6;
+  color: #E4CDF7;
 
 }
 
 a {
   color: mediumslateblue;
   text-decoration: none;
-  font-weight: bold;
   transition: 0.4s;
 }
 
