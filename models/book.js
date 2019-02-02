@@ -1,5 +1,5 @@
 'use strict';
-
+//show data from library
 module.exports = (sequelize, DataTypes) => {
   const Book = sequelize.define('Book', {
 
@@ -34,7 +34,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       validate: {
         isNumeric: {
-          msg: 'Year must be numeric'
+          msg: 'Year must be a number'
         },
         notEmpty: {//must be a number
           msg: "Must Enter Year"
