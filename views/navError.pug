@@ -1,0 +1,6 @@
+if(errors)
+  h1 Houston we have a problem!
+  ul.error
+    each error in errors
+      li
+        =error.message
