@@ -5,6 +5,7 @@
 const bodyParser = require('body-parser');
 const express = require('express');
 const app = express();
+const nodemon = require('nodemon');
 
 // Parse incoming requests/ data
 app.use(bodyParser.json());
@@ -20,10 +21,10 @@ app.use('/static', express.static('public'));
 /***** ROUTERS ******/
 /********************/
 
-const homeRoutes = require('./routes/index');
+const homeRoutes = require('./routes');
 const bookRoutes = require('./routes/books');
 
-app.use('/index', homeRoutes);
+app.use('/', homeRoutes);
 app.use('/books', bookRoutes);
 
 /********************/
@@ -42,10 +43,6 @@ app.use((erro, req, res, next) => {
 	res.render('error'); //error.pug
 })
 //end ERRORS
-
-app.listen(3000, () => {
-  console.log('App is running on localhost port: 3000 ');
-})
 
 //dont forget to export
 module.exports = app;
