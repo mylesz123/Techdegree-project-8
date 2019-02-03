@@ -52,6 +52,7 @@ router.post('/new', function(req, res, next) {
 
 /*GET book by id when title is clicked
 render update book page, catch errors
+eg. type in non existing route or book id
 */
 router.get('/:id', (req, res, next) => {
   Book.findById(req.params.id)
@@ -59,12 +60,12 @@ router.get('/:id', (req, res, next) => {
     if(books){
       res.render('updateMe', {books, title: 'Want to change something?'});
     }
-    else{
-      res.send(404, error);
+    else{ //if book id is not found: 404
+      res.render('notFound');
     }
   })
   .catch((error) => {
-    res.send(500, erorr);
+    res.send(500, error);
   })
 });
 
@@ -97,7 +98,7 @@ router.post('/:id', (req, res, next) => {
     }
   }))
   .catch((error) => {
-    res.send(500, erorr);
+    res.send(500, error);
   })
 });
 
@@ -108,14 +109,14 @@ router.post('/:id/delete', (req, res, next) => {
        return books.destroy();
      }
      else {
-       res.send(404);
+       res.send(404, error);
      }
   })
   .then((books) => {
      res.redirect('/books/');
   })
   .catch((error) => {
-       res.send(500, error);
+    res.send(500, error);
   });
 });
 
